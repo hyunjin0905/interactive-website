@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+html {
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 14px;
+}
+
+body {
+    overflow-x: hidden;
+    color: rgb(29,29, 31);
+    background: white;
+}
+
+a {
+    color: rgb(29,29,31);
+    text-decoration: none;
+}
+
+p {
+    line-height: 1.6;
+}
+
+.global-nav {
+    height: 44px;
+}
+.local-nav {
+    height: 52px;
+    border-bottom: 1px solid #cecece;
+}
+
+.global-nav-links,
+.local-nav-links {
+    display: flex;
+    max-width: 1000px;
+    height: 100%;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.global-nav-links {
+    justify-content: space-between;
+}
+/** [ css 정리 노트 1 ] em 정리
+*    기본 브라우저 1em = 16px
+*    12(원하는 크기 px) / 16(기준 크기 px) = 0.75em
+*    % 변환시 * 100 = 75 %
+*    em -> 부모기준
+*    rem -> html 기준
+*/
+
+/** [ css 정리 노트 2 ] 우선순위 ,not
+*   a < product-name 우선순위
+*   not(선택자) 선택자 만 제외 css
+*/
+
+
+.local-nav-links .product-name {
+    margin-right: auto;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+/* */
+.local-nav-links a {
+    font-size: 0.8rem;
+}
+
+
+.local-nav-links a:not(.product-name) {
+    margin-left: 2em;
+}
