@@ -4,30 +4,26 @@ html {
     font-family: 'Noto Sans KR', sans-serif;
     font-size: 14px;
 }
-
 body {
     overflow-x: hidden;
     color: rgb(29,29, 31);
     background: white;
 }
-
 a {
     color: rgb(29,29,31);
     text-decoration: none;
 }
-
 p {
     line-height: 1.6;
 }
-
 .global-nav {
     height: 44px;
 }
 .local-nav {
     height: 52px;
     border-bottom: 1px solid #cecece;
+    padding: 0 1rem;
 }
-
 .global-nav-links,
 .local-nav-links {
     display: flex;
@@ -36,7 +32,6 @@ p {
     align-items: center;
     margin: 0 auto;
 }
-
 .global-nav-links {
     justify-content: space-between;
 }
@@ -52,8 +47,6 @@ p {
 *   a < product-name 우선순위
 *   not(선택자) 선택자 만 제외 css
 */
-
-
 .local-nav-links .product-name {
     margin-right: auto;
     font-size: 1.4em;
@@ -63,8 +56,37 @@ p {
 .local-nav-links a {
     font-size: 0.8rem;
 }
-
-
 .local-nav-links a:not(.product-name) {
     margin-left: 2em;
+}
+.scroll-section {
+    padding-top: 50vh;
+}
+#scroll-section-0 h1 {
+    font-size: 4rem;
+}
+.main-message {
+    display: flex;
+    margin:5px 0;
+    align-items: center;
+    justify-content: center;
+    height: 3em; /* 현재 내 폰트사이즈 3배 */
+    font-size: 2.5rem;
+    background: rgba(0,0,0,0.3);
+}
+.main-message p {
+    line-height: 1.2;
+    font-weight: bold;
+    text-align: center;
+}
+.description {
+    padding: 0 1rem;
+    font-size: 1.2em;
+    color: #888;
+}
+.description strong {
+    font-size: 3rem;
+    float: left;
+    margin-right: 0.2em; /* 현재 내 폰트사이즈에 0.2 배 */
+    color: rgb(29,29,31);
 }
