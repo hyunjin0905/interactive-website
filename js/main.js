@@ -1,5 +1,7 @@
 (() => {
     let yOffset = 0;
+    let prevScrollHeight = 0; // 현재 스크롤위치 보다
+    let currentScene = 0; // 현재 활성화 된 씬
     const sceneInfo = [
         {
             // 0
@@ -45,11 +47,22 @@
             sceneInfo[i].scrollHeight = sceneInfo[i].heightNum * window.innerHeight;
             sceneInfo[i].objs.container.style.height = `${sceneInfo[i].heightNum}px`;
         }
-        console.log(sceneInfo);
     }
 
     function scrollLoop() {
-        console.log(yOffset)
+        prevScrollHeight = 0;
+        for (let i = 0; i < currentScene; i++) {
+            prevScrollHeight += sceneInfo[i].scrollHeight;
+        }
+        if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
+            currentScene++;
+        }
+
+        if (yOffset < prevScrollHeight) {
+            currentScene--;
+        }
+
+
     }
 
     window.addEventListener("resize",setLayout);
