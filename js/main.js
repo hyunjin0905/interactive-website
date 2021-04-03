@@ -1,4 +1,5 @@
 (() => {
+    let yOffset = 0;
     const sceneInfo = [
         {
             // 0
@@ -46,7 +47,16 @@
         }
         console.log(sceneInfo);
     }
+
+    function scrollLoop() {
+        console.log(yOffset)
+    }
+
     window.addEventListener("resize",setLayout);
+    window.addEventListener("scroll", () => {
+        yOffset = window.pageYOffset;
+        scrollLoop()
+    })
     setLayout();
 })();
 
