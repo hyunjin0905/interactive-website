@@ -54,11 +54,13 @@
         for (let i = 0; i < currentScene; i++) {
             prevScrollHeight += sceneInfo[i].scrollHeight;
         }
+        console.log(prevScrollHeight);
         if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
             currentScene++;
         }
 
         if (yOffset < prevScrollHeight) {
+            if (currentScene === 0) return;
             currentScene--;
         }
 
@@ -68,7 +70,7 @@
     window.addEventListener("resize",setLayout);
     window.addEventListener("scroll", () => {
         yOffset = window.pageYOffset;
-        scrollLoop()
+        scrollLoop();
     })
     setLayout();
 })();
