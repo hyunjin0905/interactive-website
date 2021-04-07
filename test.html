@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+<style>
+    body {
+        background-color: yellow;
+    }
+    .box {
+        background-color: #cecece;
+        width: 100%;
+        height: auto;
+
+    }
+    .contents {
+        width: 300px;
+        height: 600px;
+        border: 5px solid red;
+        overflow: scroll;
+    }
+
+</style>
+</head>
+<body>
+    <div class="box">
+       <div class="contents" id="target">
+           Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+           Atque doloremque dolores ex excepturi iste magnam neque odit,
+           quas quasi qui quis saepe tempore unde vero vitae. Delectus non
+           officiis praesentium recusandae saepe soluta suscipit unde.
+           A alias asperiores aspernatur atque beatae blanditiis dolore
+           doloribus ducimus eligendi hic impedit incidunt iste iusto laudantium
+           minus molestiae nam natus neque nulla odit quae quaerat quam quia quibusdam
+           <div id="target2">안뇽:)</div>
+           sequi unde, ut velit veniam voluptas voluptatibus. A ab accusantium architecto
+           consectetur consequuntur, deserunt dolore doloribus ducimus, earum illo minima
+           Adipisci aut dignissimos dolorem dolorum ex fuga incidunt, obcaecati
+           rem tempore unde velit vitae! Aliquam aut deserunt doloribus
+           doloribus ducimus eligendi hic impedit incidunt iste iusto laudantium
+           minus molestiae nam natus neque nulla odit quae quaerat quam quia quibusdam
+           sequi unde, ut velit veniam voluptas voluptatibus. A ab accusantium architecto
+           consectetur consequuntur, deserunt dolore doloribus ducimus, earum illo minima
+           Adipisci aut dignissimos dolorem dolorum ex fuga incidunt, obcaecati
+           rem tempore unde velit vitae! Aliquam aut deserunt doloribus
+           doloribus ducimus eligendi hic impedit incidunt iste iusto laudantium
+           minus molestiae nam natus neque nulla odit quae quaerat quam quia quibusdam
+           sequi unde, ut velit veniam voluptas voluptatibus. A ab accusantium architecto
+           consectetur consequuntur, deserunt dolore doloribus ducimus, earum illo minima
+           Adipisci aut dignissimos dolorem dolorum ex fuga incidunt, obcaecati
+           rem tempore unde velit vitae! Aliquam aut deserunt doloribus
+       </div>
+    </div>
+
+</body>
+<script>
+    const target = document.getElementById('target');
+    const target2 = document.getElementById('target2');
+
+    console.log(target.offsetHeight);
+    console.log(target.scrollTop);
+</script>
+</html>
