@@ -25,9 +25,14 @@ p {
     padding: 0 1rem;
 }
 .local-nav {
+   position: absolute;
+    top: 45px;
+    left: 0;
+    width: 100%;
     height: 52px;
-    border-bottom: 1px solid #cecece;
     padding: 0 1rem;
+    border-bottom: 1px solid #ddd;
+
 }
 .global-nav-links,
 .local-nav-links {
@@ -144,7 +149,7 @@ p {
     width: auto;
 }
 #show-scene-0 #scroll-section-0 .sticky-elem,
-#show-scene-1 #scroll-section-1.sticky-elem,
+#show-scene-1 #scroll-section-1 .sticky-elem,
 #show-scene-2 #scroll-section-2 .sticky-elem,
 #show-scene-3 #scroll-section-3 .sticky-elem{
     display:  block;
