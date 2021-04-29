@@ -70,6 +70,17 @@
         document.body.setAttribute('id', `show-scene-${currentScene}`)
     }
 
+    // 각 세션마다  범의 내에서 값을 보여야함
+    // 현재 스크롤 섹션에서 얼마나 스크롤이 됬는지 필요 (비율)
+    function calcValues(value, currentYOffset) {
+        let rv;
+        // 현재 씬에서 스크롤된 범위로 비율 구하기
+        let scrollRatio = currentYOffset / sceneInfo[currentScene].scrollHeight;
+        console.log(scrollRatio);
+        rv = parseInt(scrollRatio * 300)
+        return rv;
+    }
+
     function playAnimation () {
         // 스크롤 될 때  현재 장면만 스타일 적용
         const objs = sceneInfo[currentScene].objs
@@ -80,7 +91,7 @@
                 //css
                 let messageA_opacity_0 = values.messageA_opacity[0];
                 let messageA_opacity_1 = values.messageA_opacity[1];
-
+                calcValues()
                 break;
             case 1:
                 break;
@@ -91,13 +102,7 @@
                 break;
         }
     }
-    // 각 세션마다  범의 내에서 값을 보여야함
-    // 현재 스크롤 섹션에서 얼마나 스크롤이 됬는지 필요 (비율)
-    function calcValues(value, currentYOffset) {
 
-
-
-    }
 
 
     function scrollLoop() {
