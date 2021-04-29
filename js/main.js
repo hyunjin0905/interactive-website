@@ -72,21 +72,31 @@
 
     function playAnimation () {
         // 스크롤 될 때  현재 장면만 스타일 적용
+        const objs = sceneInfo[currentScene].objs
+        const values = sceneInfo[currentScene].values
+        const currentYOffset = yOffset - prevScrollHeight;
         switch (currentScene) {
             case 0:
-                console.log('0 play');
+                //css
+                let messageA_opacity_0 = values.messageA_opacity[0];
+                let messageA_opacity_1 = values.messageA_opacity[1];
+
                 break;
             case 1:
-                console.log('1 play');
                 break;
             case 2:
-                console.log('2 play');
                 break;
             case 3:
-                console.log('3 play');
 
                 break;
         }
+    }
+    // 각 세션마다  범의 내에서 값을 보여야함
+    // 현재 스크롤 섹션에서 얼마나 스크롤이 됬는지 필요 (비율)
+    function calcValues(value, currentYOffset) {
+
+
+
     }
 
 
@@ -95,7 +105,6 @@
         for (let i = 0; i < currentScene; i++) {
             prevScrollHeight += sceneInfo[i].scrollHeight;
         }
-        console.log(prevScrollHeight);
         if (yOffset > prevScrollHeight + sceneInfo[currentScene].scrollHeight) {
             currentScene++;
         }
@@ -116,7 +125,6 @@
 
 
     window.addEventListener("scroll", () => {
-        console.log("window.pageYOffset",window.pageYOffset);
         yOffset = window.pageYOffset;
         scrollLoop();
     })
